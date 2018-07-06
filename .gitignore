@@ -59,3 +59,13 @@ typings/
 
 # next.js build output
 .next
+
+# Source maps
+*.js.map
+
+# Mac DS_Store
+.DS_Store
+
+# Parcel
+.cache
+dist
