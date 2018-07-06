@@ -3,7 +3,7 @@ import 'preact/devtools'
 
 import './style/index' // Import SASS
 
-// if (process.env.NODE_ENV === 'production') require('./pwa')
+if (process.env.NODE_ENV === 'production') require('./pwa')
 
 import App from './components/app'
 

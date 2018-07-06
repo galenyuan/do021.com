@@ -3,10 +3,61 @@ import Button from 'preact-material-components/Button'
 import FormField from 'preact-material-components/FormField'
 import LayoutGrid from 'preact-material-components/LayoutGrid'
 import TextField from 'preact-material-components/TextField'
+import ImageList from 'preact-material-components/ImageList'
 
 import './home.scss'
 
+import cacheLogo from '../../assets/logos/cache.png'
+import elemeLogo from '../../assets/logos/eleme.png'
+import hiltonLogo from '../../assets/logos/hilton.png'
+import starbucksLogo from '../../assets/logos/starbucks.png'
+import walmartLogo from '../../assets/logos/walmart.png'
+import alibabaLogo from '../../assets/logos/alibaba.png'
+import mobilwnowLogo from '../../assets/logos/mobilenow.png'
+import ibmLogo from '../../assets/logos/ibm.png'
+import ubisoftLogo from '../../assets/logos/ubisoft.png'
+
 export default class Home extends Component {
+  companies = [
+    {
+      name: 'Alibaba',
+      src: alibabaLogo
+    },
+    {
+      name: 'MobileNow',
+      src: mobilwnowLogo
+    },
+    {
+      name: 'Ubisoft',
+      src: ubisoftLogo
+    },
+    {
+      name: 'IBM',
+      src: ibmLogo
+    }
+  ]
+  clients = [
+    {
+      name: 'Cache Cache',
+      src: cacheLogo
+    },
+    {
+      name: 'Ele.me',
+      src: elemeLogo
+    },
+    {
+      name: 'Hilton',
+      src: hiltonLogo
+    },
+    {
+      name: 'Starbucks',
+      src: starbucksLogo
+    },
+    {
+      name: 'Walmart',
+      src: walmartLogo
+    }
+  ]
   render() {
     return (
       <div class="home">
@@ -32,49 +83,27 @@ export default class Home extends Component {
             <LayoutGrid.Cell cols="12" class="us_title">
               <h1>我们来自</h1>
             </LayoutGrid.Cell>
-            <LayoutGrid.Inner>
-              <LayoutGrid.Cell cols="3">
-                {/* TODO: 调整图片大小，从assets中加载 */}
-                <section class="logo">
-                  <img
-                    src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1524898740,1582822059&fm=27&gp=0.jpg"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>Alibaba</h1>
-                </section>
-              </LayoutGrid.Cell>
-              <LayoutGrid.Cell cols="3">
-                <section class="logo">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUzMwDeQX2zqaW81cwuNMZ_yxiBq1CNQZ8EK-wnPIOtN2yPTNeUg"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>MobileNow</h1>
-                </section>
-              </LayoutGrid.Cell>
-              <LayoutGrid.Cell cols="3">
-                <section class="logo">
-                  <img
-                    src="https://img.news.goo.ne.jp/picture/gamespark/m_gamespark-79870.jpg"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>Ubisoft</h1>
-                </section>
-              </LayoutGrid.Cell>
-              <LayoutGrid.Cell cols="3">
-                <section class="logo">
-                  <img
-                    src="https://www.capgemini.com/wp-content/uploads/2017/08/ibm.png"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>IBM</h1>
-                </section>
-              </LayoutGrid.Cell>
-            </LayoutGrid.Inner>
+            <ImageList
+              masonry
+              mdc-image-list--with-text-protection
+              style={{
+                columnCount: 4,
+                columnGap: '30px',
+                maxWidth: '1200px'
+              }}
+            >
+              {this.companies.map((client, index) => (
+                <ImageList.Item key={index} class="client-logo">
+                  <ImageList.Image src={client.src} />
+                  <ImageList.Supporting>
+                    <ImageList.Label class="client-logo__name">
+                      {client.name}
+                    </ImageList.Label>
+                  </ImageList.Supporting>
+                  {/* <ImageList.AspectContainer /> */}
+                </ImageList.Item>
+              ))}
+            </ImageList>
           </LayoutGrid.Cell>
           <LayoutGrid.Cell class="mdc-theme--secondary-bg mdc-theme--on-secondary">
             <LayoutGrid.Inner>
@@ -107,60 +136,28 @@ export default class Home extends Component {
             <LayoutGrid.Cell cols="12" class="us_title">
               <h1>我们帮助过的客户</h1>
             </LayoutGrid.Cell>
-            <LayoutGrid.Inner>
-              <LayoutGrid.Cell cols="3">
-                {/* TODO: 调整图片大小，从assets中加载 */}
-                <section class="logo">
-                  <img
-                    src="https://yt3.ggpht.com/a-/ACSszfEV4zZl_BCIsBOfx74ZuaI0fJHdhVL9FVx6hg=s900-mo-c-c0xffffffff-rj-k-no"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>CACHE CACHE</h1>
-                </section>
-              </LayoutGrid.Cell>
-              <LayoutGrid.Cell cols="3">
-                {/* TODO: 调整图片大小，从assets中加载 */}
-                <section class="logo">
-                  <img
-                    src="https://appstoreisvpic.alipayobjects.com/prod/130acd80-2546-4011-ba80-8ed74dce79d1.png"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>Ele.me</h1>
-                </section>
-              </LayoutGrid.Cell>
-              <LayoutGrid.Cell cols="3">
-                <section class="logo">
-                  <img
-                    src="http://news.hiltonworldwide.com/assets/HILT/images/newsroom/HiltonBlueLogo_HR1.jpg"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>Hilton</h1>
-                </section>
-              </LayoutGrid.Cell>
-              <LayoutGrid.Cell cols="3">
-                <section class="logo">
-                  <img
-                    src="http://www.stickpng.com/assets/images/58428cc1a6515b1e0ad75ab1.png"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>Starbucks</h1>
-                </section>
-              </LayoutGrid.Cell>
-              <LayoutGrid.Cell cols="3">
-                <section class="logo">
-                  <img
-                    src="https://www.visitsouthwalton.com/sites/default/master/files/profiles/photos/profile_logo/walmart-logo0_f5d28ae6-5056-a36a-0769d79aad09c04b.jpg"
-                    height="200"
-                    width="200"
-                  />
-                  <h1>Walmart</h1>
-                </section>
-              </LayoutGrid.Cell>
-            </LayoutGrid.Inner>
+            <ImageList
+              masonry
+              mdc-image-list--with-text-protection
+              style={{
+                columnCount: 5,
+                columnGap: '30px',
+                maxWidth: '1200px'
+              }}
+            >
+              {this.clients.map((client, index) => (
+                <ImageList.Item key={index} class="client-logo">
+                  <ImageList.Image src={client.src} />
+                  <ImageList.Supporting>
+                    <ImageList.Label class="client-logo__name">
+                      {client.name}
+                    </ImageList.Label>
+                  </ImageList.Supporting>
+                  {/* <ImageList.AspectContainer /> */}
+                </ImageList.Item>
+              ))}
+            </ImageList>
+            <LayoutGrid.Inner />
           </LayoutGrid.Cell>
           <LayoutGrid.Cell class="mdc-theme--secondary-bg mdc-theme--on-secondary">
             <section class="block">
