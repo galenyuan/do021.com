@@ -3,7 +3,7 @@
   "version": "6.0.0",
   "description": "Ready-to-go Preact starter project powered by webpack.",
   "scripts": {
-    "build": "NODE_ENV=production parcel build ./src/index.html",
+    "build": "rm -rf ./dist && NODE_ENV=production parcel build ./src/index.html --public-url ./dist/ && mv ./dist/index.html ./index.html",
     "dev": "parcel ./src/index.html -p 3021 --no-cache",
     "test": "npm run -s lint && jest --coverage",
     "test:watch": "npm run -s test -- --watch",
