@@ -17,7 +17,7 @@ export default class Header extends Component {
         <TopAppBar fixed>
           <TopAppBar.Row>
             <TopAppBar.Section align-start>
-              <TopAppBar.Title>Do 0 to 1</TopAppBar.Title>
+              <TopAppBar.Title onClick={this.goHome}>Do 0 to 1</TopAppBar.Title>
             </TopAppBar.Section>
           </TopAppBar.Row>
         </TopAppBar>
