@@ -54,7 +54,7 @@
     "node-sass": "^4.9.0",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",
-    "preact-material-components": "^1.4.5",
+    "preact-material-components": "^1.4.7",
     "preact-router": "^2.6.1",
     "react": "^15.x.x || ^16.x.x",
     "react-dom": "^15.x.x || ^16.x.x",
