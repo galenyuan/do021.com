@@ -22,6 +22,8 @@
   <!-- <link rel="manifest" href="./manifest.json"> -->
   <link href="./style/normalize.css" rel="stylesheet">
   <!-- <link href="./style/theme.css" rel="stylesheet"> -->
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />
   <script type="text/javascript">
     /////////////////////////////////////////////////////////////////////////
     // Single Page Apps for GitHub Pages
@@ -59,6 +61,41 @@
 <body>
   <div id="root"></div>
   <script type="text/javascript" src="./index.js"></script>
+  <script>
+    mapboxgl.accessToken = "pk.eyJ1Ijoib2xlMzAyMSIsImEiOiJjamNpZndna3IyamppMzNwZ2NqdTgxMmVsIn0.skeOyE_MT59yi3Xqr-5LEA";
+
+    /* Map: This represents the map on the page. */
+    var map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/light-v9",
+      zoom: 11.0,
+      center: [121.43564, 31.23079]
+    });
+
+    map.on("load", function () {
+      /* Image: An image is loaded and added to the map. */
+      map.loadImage("https://i.imgur.com/MK4NUzI.png", function (error, image) {
+        if (error) throw error;
+        map.addImage("custom-marker", image);
+        /* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+        map.addLayer({
+          id: "markers",
+          type: "symbol",
+          /* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+          source: {
+            type: "geojson",
+            data: {
+              type: "FeatureCollection",
+              features: [{ "type": "Feature", "geometry": { "type": "Point", "coordinates": [121.43582410729653, 31.230829884476748] } }]
+            }
+          },
+          layout: {
+            "icon-image": "custom-marker",
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

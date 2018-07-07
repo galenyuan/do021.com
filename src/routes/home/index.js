@@ -1,9 +1,9 @@
 import { h, Component } from 'preact'
 import Button from 'preact-material-components/Button'
-import FormField from 'preact-material-components/FormField'
+import { route } from 'preact-router'
 import LayoutGrid from 'preact-material-components/LayoutGrid'
-import TextField from 'preact-material-components/TextField'
 import ImageList from 'preact-material-components/ImageList'
+import TextField from 'preact-material-components/TextField'
 
 import './home.scss'
 
@@ -58,6 +58,13 @@ export default class Home extends Component {
       src: walmartLogo
     }
   ]
+
+  linkTo = path => () => {
+    route(path)
+  }
+
+  // TOFIX: Not working
+  goContact = this.linkTo('/#contact')
   render() {
     return (
       <div class="home">
@@ -70,8 +77,13 @@ export default class Home extends Component {
                   <h3>
                     从众多项目和经验中使用最有效的最可靠的帮助客户从0到1的实现自己到项目。
                   </h3>
-                  <Button ripple raised class="into_button">
-                    <Button.Icon>star</Button.Icon>了解一下
+                  <Button
+                    ripple
+                    raised
+                    class="into_button"
+                    onClick={this.goContact}
+                  >
+                    <Button.Icon>star</Button.Icon>联系我们
                   </Button>
                 </section>
               </LayoutGrid.Cell>
@@ -160,26 +172,28 @@ export default class Home extends Component {
             <LayoutGrid.Inner />
           </LayoutGrid.Cell>
           <LayoutGrid.Cell class="mdc-theme--secondary-bg mdc-theme--on-secondary">
-            <section class="block">
-              <h1>联系我们</h1>
-              <FormField>
-                <TextField label="称呼" />
-              </FormField>
-              <FormField>
-                <TextField label="联系方式" helperText="手机/邮箱" />
-              </FormField>
-              <FormField>
-                <TextField label="消息" textarea={true} />
-              </FormField>
-              <Button
-                type="submit"
-                raised
-                ripple
-                className="mdc-theme--primary-bg mdc-theme--on-primary"
-              >
-                提交
-              </Button>
-            </section>
+            <LayoutGrid.Inner>
+              <LayoutGrid.Cell cols="6">
+                <div id="map" />
+              </LayoutGrid.Cell>
+              <LayoutGrid.Cell cols="6">
+                <section id="contact" class="block">
+                  <h1>联系我们</h1>
+                  <TextField box fullwidth label="称呼" />
+                  {''}
+                  <TextField box fullwidth label="联系方式" />
+                  <TextField box fullwidth textarea label="消息" />
+                  <Button
+                    type="submit"
+                    raised
+                    ripple
+                    className="mdc-theme--primary-bg mdc-theme--on-primary"
+                  >
+                    提交
+                  </Button>
+                </section>
+              </LayoutGrid.Cell>
+            </LayoutGrid.Inner>
           </LayoutGrid.Cell>
         </LayoutGrid>
       </div>
