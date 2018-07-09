@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
+	<script type="text/javascript">
+		// redirect to https if not request the https site
+		var host = "do021.com"
+		if ((host == windows.location.host) && (window.location.protocol != "https:"))
+			window.location.protocol = "https:"
+	</script>
 	<meta charset="UTF-8" />
+	<link rel="canonical" href="https://do021.com" />
 	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
 
 	<!-- Title &amp; Favicon -->
@@ -14,11 +22,30 @@
 	<!--[if lt IE 9]>
     	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+	<script type="text/javascript">
+				(function (l) {
+					if (l.search) {
+						var q = {};
+						l.search.slice(1).split('&').forEach(function (v) {
+							var a = v.split('=');
+							q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+						});
+						if (q.p !== undefined) {
+							window.history.replaceState(null, null,
+								l.pathname.slice(0, -1) + (q.p || '') +
+								(q.q ? ('?' + q.q) : '') +
+								l.hash
+							);
+						}
+					}
+				}(window.location))
+	</script>
 </head>
+
 <body class="shop home-page">
-  <div id="app"></div>
+	<div id="app"></div>
 
 	<script src="//do021-site.oss-cn-hangzhou.aliyuncs.com/jquery-3.2.1.min.js"></script>
 </body>
+
 </html>
