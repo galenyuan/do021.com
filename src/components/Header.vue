@@ -9,8 +9,8 @@
         <div class="column width-12 nav-bar-inner">
           <div class="logo">
             <div class="logo-inner">
-              <a href="index.html"><img src="//do021-site.oss-cn-hangzhou.aliyuncs.com/images/logo-dark.png" alt="Faulkner Logo" /></a>
-              <a href="index.html"><img src="//do021-site.oss-cn-hangzhou.aliyuncs.com/images/logo.png" alt="Faulkner Logo" /></a>
+              <a href="/"><img src="//do021-site.oss-cn-hangzhou.aliyuncs.com/images/logo-dark.png" alt="Faulkner Logo" /></a>
+              <a href="/"><img src="//do021-site.oss-cn-hangzhou.aliyuncs.com/images/logo.png" alt="Faulkner Logo" /></a>
             </div>
           </div>
           <nav class="navigation nav-block secondary-navigation nav-right">
