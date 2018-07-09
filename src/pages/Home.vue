@@ -8,6 +8,7 @@
       <div class="content clearfix reveal-footer">
         <slider />
         <about-us />
+        <services />
         <team />
         <why-us />
         <contact />
@@ -93,6 +94,7 @@ import WhyUs from '@/components/WhyUs'
 import Team from '@/components/Team'
 import Slider from '@/components/Slider'
 import Contact from '@/components/Contact'
+import Services from '@/components/Services'
 
 const SCRIPT_URL = '//do021-site.oss-cn-hangzhou.aliyuncs.com/timber.master.min.js'
 
@@ -102,7 +104,8 @@ export default {
     WhyUs,
     Team,
     Slider,
-    Contact
+    Contact,
+    Services
   },
 
   mounted () {
