@@ -3,29 +3,94 @@
 </style>
 
 <template>
-<div id="why-us" class="section-block replicable-content">
+<div id="why-us" class="section-block replicable-content bkg-white">
   <div class="row">
-    <div class="column width-10 offset-1 center">
-      <h2 class="mb-30">{{ STRING.title }}</h2>
-      <p class="lead mb-70">{{ STRING.description }}</p>
-    </div>
-  </div>
-  <div class="row flex boxes one-column-on-tablet">
-    <div class="column width-5 v-align-middle">
-      <div class="box box-2 background-cover xlarge rounded bkg-white color-white shadow">
-        <div class="media-overlay bkg-black opacity-04"></div>
-        <div class="pt-0 pb-30">
-          <h3>{{ STRING.content[0].title }}</h3>
-          <p class="lead mb-50">{{ STRING.content[0].description }}</p>
-        </div>
-      </div>
-    </div>
-    <div class="column width-7">
-      <div class="row flex boxes">
-        <div class="column width-6" v-for="(reason, index) in reasons" :key="index">
-          <div class="box xlarge rounded border-grey-light">
-            <h4>{{ reason.title }}</h4>
-            <p>{{ reason.description }}</p>
+  <h2><b>{{ STRING.title }}</b></h2>
+    <div class="column width-12">
+      <div class="tabs unstyled vertical rounded left">
+        <ul class="tab-nav width-4">
+          <li class="">
+            <a href="#tabs-1-pane-1">
+              <span class="icon-database color-blue"></span>
+              <span class="title-small text-uppercase weight-semi-bold mb-10 inline-block">{{ STRING.tab1.subTitle }}</span><br>
+              <span class="hide-on-mobile mb-20 inline-block">{{ STRING.tab1.intro }}</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="#tabs-1-pane-2">
+              <span class="icon-network color-blue"></span>
+              <span class="title-small text-uppercase weight-semi-bold mb-10 inline-block">{{ STRING.tab2.subTitle }}</span><br>
+              <span class="hide-on-mobile mb-20 inline-block">{{ STRING.tab2.intro }}</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="#tabs-1-pane-3">
+              <span class="icon-code color-blue"></span>
+              <span class="title-small text-uppercase weight-semi-bold mb-10 inline-block">{{ STRING.tab3.subTitle }}</span><br>
+              <span class="hide-on-mobile mb-20 inline-block">{{ STRING.tab3.intro }}</span>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-panes width-7 offset-1">
+          <div id="tabs-1-pane-1" class="animate">
+            <div class="tab-content">
+              <div class="row flex">
+                <div class="column width-12">
+                  <h3 class="weight-semi-bold">{{ STRING.tab1.contentTitle }}</h3>
+                  <p class="lead mb-50">{{ STRING.tab1.content }}</p>
+                  <div class="row">
+                    <div class="column width-6">
+                      <span class="title-large font-alt-1 weight-light opacity-04">01</span>
+                      <p>{{ STRING.tab1.subContentA }}</p>
+                    </div>
+                    <div class="column width-6">
+                      <span class="title-large font-alt-1 weight-light opacity-04">02</span>
+                      <p>{{ STRING.tab1.subContentB }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tabs-1-pane-2" class="">
+            <div class="tab-content">
+              <div class="row flex">
+                <div class="column width-12">
+                  <h3 class="weight-semi-bold">{{ STRING.tab2.contentTitle }}</h3>
+                  <p class="lead mb-50">{{ STRING.tab2.content }}</p>
+                  <div class="row">
+                    <div class="column width-6">
+                      <span class="title-large font-alt-1 weight-light opacity-04">01</span>
+                      <p>{{ STRING.tab2.subContentA }}</p>
+                    </div>
+                    <div class="column width-6">
+                      <span class="title-large font-alt-1 weight-light opacity-04">02</span>
+                      <p>{{ STRING.tab2.subContentB }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tabs-1-pane-3" class="active animate-in">
+            <div class="tab-content">
+              <div class="row flex">
+                <div class="column width-12">
+                  <h3 class="weight-semi-bold">{{ STRING.tab3.contentTitle }}</h3>
+                  <p class="lead mb-50">{{ STRING.tab3.content }}</p>
+                  <div class="row">
+                    <div class="column width-6">
+                      <span class="title-large font-alt-1 weight-light opacity-04">01</span>
+                      <p>{{ STRING.tab3.subContentA }}</p>
+                    </div>
+                    <div class="column width-6">
+                      <span class="title-large font-alt-1 weight-light opacity-04">02</span>
+                      <p>{{ STRING.tab3.subContentB }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
