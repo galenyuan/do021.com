@@ -15,17 +15,8 @@
         </div>
         <nav class="side-navigation nav-block">
           <ul>
-            <li>
-              <a class="scroll-link" href="#about-us">About US</a>
-            </li>
-            <li>
-              <a class="scroll-link" href="#team">Team</a>
-            </li>
-            <li>
-              <a class="scroll-link" href="#why-us">Why Do021?</a>
-            </li>
-            <li>
-              <a class="scroll-link" href="#contact">Contact US</a>
+            <li v-for="(nav, index) in STRING" :key="index">
+              <a class="scroll-link" :href="nav.href">{{ nav.title }}</a>
             </li>
           </ul>
         </nav>
@@ -39,6 +30,10 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      STRING: window.TEMPLATE_CONTENT.navigation
+    }
+  }
 }
 </script>

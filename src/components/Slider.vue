@@ -30,16 +30,16 @@
           </div>
           <h1 class="mb-20">
             <span class="color-white mb-5">
-              我们是一个专注于研发卓越互联网产品的团队。
+              {{ STRING.title }}
             </span>
           </h1>
           <p class="lead weight-light color-white mb-30 hide-on-mobile">
-            我们擅长从0到1创造品质极佳的产品，用我们的技术和经验让客户取得成功的同时也让用户获得更好的体验。我们用专业知识力求产品的每一处细节都完美。如果您在寻找一个帮您实现互联网产品创意的团队，我们将是不二之选。
+            {{ STRING.content }}
           </p>
           <div class="mb-mobile-30">
             <a href="#about-us" data-animate-in="preset:slideInUpShort;duration:800ms;delay:1000ms;" data-no-scale="" class="scroll-link button rounded medium text-small border-white color-white bkg-hover-theme color-hover-white no-scale"
               style="transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); opacity: 1; transform-origin: 50% 50% 0px; visibility: visible;">
-              了解更多
+              {{ STRING.buttonText }}
             </a>
           </div>
         </div>
@@ -57,5 +57,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      STRING: window.TEMPLATE_CONTENT.homeBg
+    }
+  }
+}
 </script>

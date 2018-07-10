@@ -10,8 +10,8 @@
     <div class="column width-8 offset-2">
       <div class="feature-content">
         <div class="feature-content-inner pt-mobile-60 center">
-          <h2 class="mb-20 color-white">About US</h2>
-          <p class="lead mb-30 color-white opacity-07">Unique, elegant and modern shop layouts that have been designed with the utter most care to showcase your physical and digital products.</p>
+          <h2 class="mb-20 color-white">{{ STRING.title }}</h2>
+          <p class="lead mb-30 color-white opacity-07">{{ STRING.content }}</p>
         </div>
       </div>
     </div>
@@ -21,6 +21,10 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      STRING: window.TEMPLATE_CONTENT.aboutUs
+    }
+  }
 }
 </script>
