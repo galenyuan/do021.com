@@ -8,8 +8,8 @@
       <div class="column width-8 offset-2">
         <div class="feature-content">
           <div class="feature-content-inner pt-60 pt-mobile-60 center">
-            <h2 class="mb-20">Contact US</h2>
-            <p class="lead mb-30 opacity-07">Build stunning masonry grids with large, small or no margins and showcase your projects in style using the project layouts.</p>
+            <h2 class="mb-20">{{ STRING.title }}</h2>
+            <p class="lead mb-30 opacity-07">{{ STRING.description }}</p>
           </div>
         </div>
       </div>
@@ -26,6 +26,10 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      STRING: window.TEMPLATE_CONTENT.contact
+    }
+  }
 }
 </script>
