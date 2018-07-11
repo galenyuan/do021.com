@@ -9,30 +9,30 @@
     <div class="column width-12">
       <div class="tabs unstyled vertical rounded left">
         <ul class="tab-nav width-4">
-          <li class="">
+          <li class="active">
             <a href="#tabs-1-pane-1">
-              <span class="icon-database color-blue"></span>
+              <span class="icon-medal color-blue"></span>
               <span class="title-small text-uppercase weight-semi-bold mb-10 inline-block">{{ STRING.tab1.subTitle }}</span><br>
               <span class="hide-on-mobile mb-20 inline-block">{{ STRING.tab1.intro }}</span>
             </a>
           </li>
           <li class="">
             <a href="#tabs-1-pane-2">
-              <span class="icon-network color-blue"></span>
+              <span class="icon-graduation-cap color-blue"></span>
               <span class="title-small text-uppercase weight-semi-bold mb-10 inline-block">{{ STRING.tab2.subTitle }}</span><br>
               <span class="hide-on-mobile mb-20 inline-block">{{ STRING.tab2.intro }}</span>
             </a>
           </li>
-          <li class="active">
+          <li class="">
             <a href="#tabs-1-pane-3">
-              <span class="icon-code color-blue"></span>
+              <span class="icon-flow-tree color-blue"></span>
               <span class="title-small text-uppercase weight-semi-bold mb-10 inline-block">{{ STRING.tab3.subTitle }}</span><br>
               <span class="hide-on-mobile mb-20 inline-block">{{ STRING.tab3.intro }}</span>
             </a>
           </li>
         </ul>
         <div class="tab-panes width-7 offset-1">
-          <div id="tabs-1-pane-1" class="animate">
+          <div id="tabs-1-pane-1" class="active animate">
             <div class="tab-content">
               <div class="row flex">
                 <div class="column width-12">
@@ -52,7 +52,7 @@
               </div>
             </div>
           </div>
-          <div id="tabs-1-pane-2" class="">
+          <div id="tabs-1-pane-2" class="animate">
             <div class="tab-content">
               <div class="row flex">
                 <div class="column width-12">
@@ -72,7 +72,7 @@
               </div>
             </div>
           </div>
-          <div id="tabs-1-pane-3" class="active animate-in">
+          <div id="tabs-1-pane-3" class="animate">
             <div class="tab-content">
               <div class="row flex">
                 <div class="column width-12">

@@ -22,12 +22,12 @@
           <p class="lead">{{ STRING.content }}</p>
           <div class="row">
             <div class="column width-6">
-              <h4 class="color-pink">{{ STRING.subTitle1 }}</h4>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+              <h4 class="color-blue">{{ STRING.subTitle1 }}</h4>
+              <p>{{ STRING.subContent1 }}</p>
             </div>
             <div class="column width-6">
-              <h4 class="color-green">{{ STRING.subTitle2 }}</h4>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+              <h4 class="color-blue">{{ STRING.subTitle2 }}</h4>
+              <p>{{ STRING.subContent2 }}</p>
             </div>
           </div>
         </div>
