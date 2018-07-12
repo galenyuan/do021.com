@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-image: url(//do021-site.oss-cn-hangzhou.aliyuncs.com/images/slider/slide-7-fs@2x.jpg);
+    background-image: url(https://cdn.do021.com/images/slider/slide-7-fs@2x.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }

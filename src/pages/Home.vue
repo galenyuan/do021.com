@@ -55,7 +55,7 @@ import introMaintainence from '@/components/introMaintainence'
 import WhyUs from '@/components/WhyUs'
 import Contact from '@/components/Contact'
 
-const SCRIPT_URL = '//do021-site.oss-cn-hangzhou.aliyuncs.com/timber.master.min.js'
+const SCRIPT_URL = 'https://cdn.do021.com/timber.master.min.js'
 
 export default {
   data () {
