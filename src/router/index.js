@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
+import EmailSend from '@/pages/EmailSend'
 import NotFound from '@/pages/NotFound'
 
 Vue.use(Router)
@@ -12,6 +13,11 @@ const router = new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/send',
+      name: 'EmailSend',
+      component: EmailSend
     },
     {
       path: '*',
@@ -45,8 +51,9 @@ router.beforeEach((to, from, next) => {
 
   const query = { lang: targetLang }
   if (!window.TEMPLATE_CONTENT) {
-    import(/* webpackChunkName: "i18n-template-string" */ `@/consts/i18n-${targetLang}`)
-      .then(_ => next({ path: to.path, query }))
+    import(/* webpackChunkName: "i18n-template-string" */ `@/consts/i18n-${targetLang}`).then(
+      _ => next({ path: to.path, query })
+    )
   } else {
     next({ path: to.path, query })
   }

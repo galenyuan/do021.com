@@ -8,7 +8,9 @@
     <div class="column width-6 offset-3 center">
       <h3 class="mb-30 color-white">{{ STRING.title }}</h3>
       <div class="register-form-container">
-        <form class="register-form" action="mailto:ole3021@gmail.com" method="post" novalidate="">
+        <form class="register-form" action="https://fp1.formmail.com/cgi-bin/fm192" method="post" novalidate="">
+          <input type="hidden" name="_pid" value="154274">
+          <input type="hidden" name="_fid" value="J8I34U8X">
           <div class="row merged-form-elements">
             <div class="column width-6">
               <div class="field-wrapper">
@@ -40,7 +42,6 @@
             <div class="column width-12 mt-10">
               <input type="submit" :value="STRING.submit" class="form-submit button rounded medium border-white bkg-hover-blue-light bkg-focus-green color-white color-hover-white no-margins">
             </div>
-            <p class="color-white">自动提交功能添加中</p>
           </div>
         </form>
         <div class="form-response show"></div>
