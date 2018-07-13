@@ -11,7 +11,7 @@
     <div class="column width-6">
       <div class="feature-image tmh-perspective">
         <div class="feature-image-inner center-on-mobile horizon" data-animate-in="preset:slideInLeftShort;duration:1000;" data-threshold="0.6" style="backface-visibility: hidden; transition: -webkit-transform 1000ms cubic-bezier(0.11, 0.69, 0.66, 1.01), opacity; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); opacity: 1; visibility: visible; transform-origin: 50% 50% 0px;">
-          <img src="../assets/images/intro-architecture.png" alt="">
+          <img src="//cdn.do021.com/images/intro-architecture.png" alt="">
         </div>
       </div>
     </div>

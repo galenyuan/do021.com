@@ -12,27 +12,27 @@
       <div class="row content-grid-5 opacity-05">
         <div class="grid-item">
           <a>
-            <img src="../assets/logos/alibaba.png" alt="Alibaba">
+            <img src="//cdn.do021.com/images/logos/alibaba.png" alt="Alibaba">
           </a>
         </div>
         <div class="grid-item">
           <a>
-            <img src="../assets/logos/glow.png" alt="Glow">
+            <img src="//cdn.do021.com/images/logos/glow.png" alt="Glow">
           </a>
         </div>
         <div class="grid-item">
           <a>
-            <img src="../assets/logos/ibm.png" alt="IBM">
+            <img src="//cdn.do021.com/images/logos/ibm.png" alt="IBM">
           </a>
         </div>
         <div class="grid-item">
           <a>
-            <img src="../assets/logos/pwc.png" alt="pwc">
+            <img src="//cdn.do021.com/images/logos/pwc.png" alt="pwc">
           </a>
         </div>
         <div class="grid-item">
           <a>
-            <img src="../assets/logos/wiredcraft.png" alt="Wiredcraft">
+            <img src="//cdn.do021.com/images/logos/wiredcraft.png" alt="Wiredcraft">
           </a>
         </div>
       </div>

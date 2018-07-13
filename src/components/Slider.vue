@@ -24,10 +24,6 @@
     <div class="row flex two-columns-on-tablet">
       <div class="column width-7 v-align-middle left center-on-mobile">
         <div>
-          <div class="thumbnail mb-20">
-            <img src="images/logos/accepted-credit-cards.png" alt="" style="transition-duration: 400ms; transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);"
-              width="200">
-          </div>
           <h1 class="mb-20">
             <span class="color-white mb-5">
               {{ STRING.title }}
@@ -41,14 +37,6 @@
               style="transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); opacity: 1; transform-origin: 50% 50% 0px; visibility: visible;">
               {{ STRING.buttonText }}
             </a>
-          </div>
-        </div>
-      </div>
-      <div class="column width-5 right center-on-mobile">
-        <div class="feature-image">
-          <div class="thumbnail mb-0">
-            <img src="images/generic/iphone-7.png" alt="" style="transition-duration: 400ms; transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);"
-              width="350">
           </div>
         </div>
       </div>
